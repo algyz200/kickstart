@@ -21,6 +21,7 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5",
         "symfony/maker-bundle": "^1.13",
+        "symfony/phpunit-bridge": "^5.0",
         "symfony/profiler-pack": "^1.0"
     },
     "config": {
@@ -31,7 +32,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "App\\Testing\\": "src/",
+            "App\\Services\\Tests\\": "services/"
         }
     },
     "autoload-dev": {
