@@ -4,16 +4,8 @@ namespace App\Testing;
 
 class NumberFormatter
 {
-//    private $input;
-//
-//    public function __construct($input)
-//    {
-//        $this->input = $input;
-//    }
-
     public function convertNumber($number): string
     {
-        //$number = $this->input;
         $negative = false;
 
         if ($number < 0) {
