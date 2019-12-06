@@ -17,6 +17,7 @@ class MoneyFormatter
     public function formatEur($number): string
     {
         $converted = $this->numberFormatter->convertNumber($number);
+
         $signAdded = $converted . " €";
 
         return $signAdded;

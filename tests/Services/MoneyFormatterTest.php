@@ -17,7 +17,6 @@ class MoneyFormatterTest extends TestCase
     public function setUp(): void
     {
         $this->sut = new MoneyFormatter($this->NumberFormatterMock());
-        //$this->sut->formatUsd($this->NumberFormatterMock());
     }
 
     public function testEurAdded()
@@ -33,6 +32,7 @@ class MoneyFormatterTest extends TestCase
     public function NumberFormatterMock()
     {
         $mock = $this->getMockBuilder(NumberFormatter::class)
+            ->setMethods(['formatEur','formatUsd'])
             ->getMock();
 
         return $mock;
